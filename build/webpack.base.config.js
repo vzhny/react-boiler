@@ -1,4 +1,3 @@
-// * Following webpack 4 set-up from https://auralinna.blog/
 /* eslint-disable */
 const webpack = require('webpack');
 const path = require('path');
