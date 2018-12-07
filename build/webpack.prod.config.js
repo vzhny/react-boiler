@@ -7,5 +7,9 @@ const webpackBaseConfig = require('./webpack.base.config.js');
 module.exports = merge(webpackBaseConfig, {
   optimization: {
     minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin()],
+    splitChunks: {
+      chunks: 'all',
+      name: true,
+    },
   },
 });

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LandingImage from '../../components/UI/LandingImage/LandingImage';
+import LandingImage from '@/components/UI/LandingImage/LandingImage';
 import styles from './App.module.scss';
 
 export default class App extends Component {

@@ -14,16 +14,13 @@ module.exports = {
     modules: ['node_modules', path.resolve(__dirname, '../src')],
     extensions: ['.js'],
     alias: {
-      '@components': path.resolve(__dirname, '../src/components'),
-      '@containers': path.resolve(__dirname, '../src/containers'),
-      '@scss': path.resolve(__dirname, '../src/scss'),
-      '@images': path.resolve(__dirname, '../src/images'),
       '@': path.resolve(__dirname, '../src'),
     },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      favicon: path.resolve(__dirname, '../public/favicon.ico'),
       inject: true,
       minify: {
         removeComments: true,
@@ -70,7 +67,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif)$/,
         use: [
           {
             loader: 'file-loader',

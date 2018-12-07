@@ -1,5 +1,5 @@
 import React from 'react';
-import mapImage from '../../../images/map.png';
+import mapImage from '@/images/map.svg';
 import styles from './LandingImage.module.scss';
 
 const LandingImage = props => (
