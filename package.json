@@ -27,6 +27,7 @@
     "node-sass": "^4.10.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
+    "prop-types": "^15.6.2",
     "react-svg-loader": "^2.1.0",
     "sass-loader": "^7.1.0",
     "scss-loader": "^0.0.1",
