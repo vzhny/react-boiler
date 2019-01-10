@@ -8,12 +8,38 @@
   justify-content: center;
   align-items: center;
 
-  .Heading {
-    color: $black;
+  .Nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &:hover {
-      cursor: default;
-      text-decoration: underline;
+    li a {
+      text-decoration: none;
+      color: $black;
+      margin: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color: $black;
+      }
     }
+  }
+
+  .Heading {
+    text-align: center;
+    color: $black;
+    font-size: 4rem;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  .Blurb {
+    text-align: justify;
+    color: $black;
+    width: 300px;
   }
 }
