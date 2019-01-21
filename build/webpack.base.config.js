@@ -11,9 +11,6 @@ module.exports = {
     filename: 'app.[contenthash:8].js',
     publicPath: '/',
   },
-  devServer: {
-    historyApiFallback: true,
-  },
   resolve: {
     modules: ['node_modules', path.resolve(__dirname, '../src')],
     extensions: ['.js'],
