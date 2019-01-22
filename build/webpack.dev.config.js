@@ -1,29 +1,25 @@
 /* eslint-disable */
 const merge = require('webpack-merge');
 const chalk = require('chalk');
-const CleanTerminalPlugin = require('clean-terminal-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const webpackBaseConfig = require('./webpack.base.config.js');
 
-const host = 'localhost';
-const port = '8080';
-
-const message = chalk.bold(
-  `Dev server running on http://${chalk.green(host)}:${chalk.green(port)}!
-
-Press ${chalk.yellow('Ctrl + C')} to stop the server.
-  `
-);
+const url = chalk.bold(chalk.blue('http://localhost:8080'));
+const sigInt = chalk.bold(chalk.white('Ctrl + C'));
 
 module.exports = merge(webpackBaseConfig, {
   devtool: 'source-map',
   devServer: {
     historyApiFallback: true,
     open: true,
-    noInfo: true,
+    quiet: true,
   },
   plugins: [
-    new CleanTerminalPlugin({
-      message,
+    new FriendlyErrorsWebpackPlugin({
+      compilationSuccessInfo: {
+        messages: [`Dev server is successfully running on ${url}!`],
+        notes: [`Press ${sigInt} to stop the server.`],
+      },
     }),
   ],
 });
