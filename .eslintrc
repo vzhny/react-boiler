@@ -68,10 +68,10 @@
       }
     ],
     "quotes": [
-      2,
+      1,
       "single",
       {
-        "avoidEscape": true,
+        "avoidEscape": false,
         "allowTemplateLiterals": true
       }
     ],

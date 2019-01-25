@@ -1,13 +1,17 @@
 # React Boilerplate Using Webpack 4
 
-My personal webpack 4 config set-up for developing in React. Followed the steps posted on https://auralinna.blog/ as well as the Webpack docs.
+My personal webpack 4 config set-up for developing in React. Followed the steps posted [here](https://auralinna.blog/) as well as the Webpack docs.
+
+## Features
+
+- Eslint included.
+- Code splitting.
+- Aliasing -- use `@` in imports to point to `/src/`.
+- Favicon support.
+- CSS Modules and SVG imports.
+- Reach router included.
 
 ## To-do List
 
-- ~~Add code splitting functionality.~~
-- ~~Fix aliases not working correctly.~~
-- ~~Add a default favicon.~~
-- ~~Fix broken svg imports.~~
-- ~~Add reach router.~~
 - Add Jest and react-testing-library functionality.
-- Add manifest.json and service worker logic.
+- Add service worker logic and mainfest file.
