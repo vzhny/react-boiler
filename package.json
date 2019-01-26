@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack --mode production --config ./build/webpack.prod.config.js",
-    "dev": "webpack-dev-server --mode development --config ./build/webpack.dev.config.js"
+    "dev": "webpack-dev-server --mode development --config ./build/webpack.dev.config.js",
+    "test": "jest --watch"
   },
   "author": "Diego Vizhnay <diego@vzhny.com> (https://vizhnay.io)",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.4.2",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
     "babel-loader": "^8.0.4",
     "chalk": "^2.4.2",
     "clean-terminal-webpack-plugin": "^2.0.1",
@@ -41,12 +43,16 @@
     "file-loader": "^2.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "ip": "^1.1.5",
+    "jest": "^24.0.0",
+    "jest-css-modules": "^1.1.0",
     "mini-css-extract-plugin": "^0.4.5",
     "node-sass": "^4.10.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "react-svg-loader": "^2.1.0",
+    "react-testing-library": "^5.4.4",
     "sass-loader": "^7.1.0",
     "scss-loader": "^0.0.1",
     "style-loader": "^0.23.1",
@@ -56,6 +62,22 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
     "webpack-merge": "^4.1.4"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.(css|sass|scss)$": "jest-css-modules"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/mocks/fileMock.js",
+      "\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "collectCoverageFrom": [
+      "src/components/**/*.js",
+      "src/containers/**/*.js",
+      "src/pages/*.js"
+    ]
   },
   "browserslist": [
     "> 1%",

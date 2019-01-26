@@ -4,14 +4,14 @@ My personal webpack 4 config set-up for developing in React. Followed the steps 
 
 ## Features
 
-- Eslint included.
-- Code splitting.
-- Aliasing -- use `@` in imports to point to `/src/`.
-- Favicon support.
-- CSS Modules and SVG imports.
-- Reach router included.
+- Jest and react-testing-library for React and general testing functionality.
+- Eslint included for code linting.
+- Code splitting for faster web app loading.
+- Aliasing for ease of use when importing modules and components -- use `@` in imports to point to `/src/`.
+- Favicon support included -- simply replace favicon.ico in the public folder.
+- (S)CSS Modules and SVG imports fully supported.
+- Reach router included for single page application functionality.
 
 ## To-do List
 
-- Add Jest and react-testing-library functionality.
 - Add service worker logic and mainfest file.
