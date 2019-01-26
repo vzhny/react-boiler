@@ -1,0 +1,20 @@
+@import '~@/styles/scss/partials/abstracts';
+
+.Heading {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+@include tablet {
+  .Heading {
+    font-size: 3rem;
+  }
+}
+
+@include mobile {
+  .Heading {
+    font-size: 2rem;
+  }
+}

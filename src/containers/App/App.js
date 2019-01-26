@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { Router } from '@reach/router';
 import Navigation from '@/components/Navigation/Navigation';
+import Heading from '@/components/Heading/Heading';
 import NotFound from '@/pages/NotFound';
 import ReactLogo from '@/images/react_logo.svg';
 import styles from './App.module.scss';
-
-const Home = () => <h1 className={styles.Heading}>Hello World</h1>;
-
-const About = () => <h1 className={styles.Heading}>About Us</h1>;
 
 export default class App extends Component {
   render() {
@@ -16,8 +13,8 @@ export default class App extends Component {
         <img className={styles.Image} src={ReactLogo} alt="React Logo" />
         <Navigation />
         <Router>
-          <Home path="/" />
-          <About path="/about" />
+          <Heading message="Hello World!" path="/" />
+          <Heading message="About Us" path="/about" />
           <NotFound default />
         </Router>
       </div>

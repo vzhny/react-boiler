@@ -13,36 +13,4 @@
 .Image {
   height: 200px;
   width: 200px;
-  animation-name: spin;
-  animation-duration: 15000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.Heading {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 100;
-  margin: 0;
-}
-
-@include tablet {
-  .Heading {
-    font-size: 3rem;
-  }
-}
-
-@include mobile {
-  .Heading {
-    font-size: 2rem;
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
