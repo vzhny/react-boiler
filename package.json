@@ -6,13 +6,14 @@
   "scripts": {
     "build": "webpack --mode production --config ./build/webpack.prod.config.js",
     "dev": "webpack-dev-server --mode development --config ./build/webpack.dev.config.js",
+    "lint": "eslint src/components/**/*.js src/containers/**/*.js src/pages/*.js",
     "test": "jest"
   },
   "author": "Diego Vizhnay <diego@vzhny.com> (https://vizhnay.io)",
   "license": "MIT",
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run test",
+      "pre-commit": "yarn run lint",
       "pre-push": "yarn run test"
     }
   },
