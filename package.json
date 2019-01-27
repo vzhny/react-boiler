@@ -51,10 +51,9 @@
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.3.1",
-    "identity-obj-proxy": "^3.0.0",
     "ip": "^1.1.5",
     "jest": "^24.0.0",
-    "jest-css-modules": "^1.1.0",
+    "jest-transform-stub": "^1.0.0",
     "mini-css-extract-plugin": "^0.4.5",
     "node-sass": "^4.10.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
@@ -75,11 +74,10 @@
     "verbose": true,
     "transform": {
       "^.+\\.js$": "babel-jest",
-      "^.+\\.(css|sass|scss)$": "jest-css-modules"
+      ".+\\.(css|styl|less|sass|scss|png|jpg|svg|ttf|woff|woff2)$": "jest-transform-stub"
     },
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/mocks/fileMock.js",
-      "\\.(css|sass|scss)$": "identity-obj-proxy"
+      "@/(.*)$": "<rootDir>/src/$1"
     },
     "collectCoverageFrom": [
       "src/components/**/*.js",
