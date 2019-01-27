@@ -5,7 +5,7 @@ My personal webpack 4 config set-up for developing in React. Followed the steps 
 ## Features
 
 - Jest and react-testing-library for React and general testing functionality.
-- Eslint included for code linting.
+- Eslint, using the airbnb-base config, for code linting.
 - Code splitting for faster web app loading.
 - Aliasing for ease of use when importing modules and components -- use `@` in imports to point to `/src/`.
 - Favicon support included -- simply replace favicon.ico in the public folder.
