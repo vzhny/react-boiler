@@ -1,6 +1,6 @@
 # React Boilerplate Using Webpack 4
 
-My personal webpack 4 config set-up for developing in React. Followed the steps posted [here](https://auralinna.blog/) as well as the Webpack docs.
+My personal webpack 4 config setup for developing in React. Followed the steps posted [here](https://auralinna.blog/) as well as the Webpack docs.
 
 ## Features
 
