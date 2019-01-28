@@ -6,7 +6,8 @@
   justify-content: center;
   align-items: center;
 
-  li a {
+  .NavLink {
+    color: $white;
     text-decoration: none;
     margin: 1rem;
 
