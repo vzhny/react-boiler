@@ -1,15 +1,13 @@
 import React from 'react';
-import { render, cleanup } from 'react-testing-library';
+import { render } from 'react-testing-library';
 import Heading from './Heading';
-
-/* Followed the guide at https://link.medium.com/fhDZqcKLNT */
-
-afterEach(cleanup);
 
 describe('Heading', () => {
   it('should contain a message', () => {
     const { getByText, rerender } = render(<Heading message="Hello" />);
-    getByText('Hello');
+    const text = getByText('Hello');
+    expect(text).toHaveTextContent('Hello');
+
     rerender(<Heading message="World!" />);
     getByText('World!');
   });
