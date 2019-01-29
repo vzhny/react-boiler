@@ -50,6 +50,7 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
+        exclude: /(node_modules)/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -91,6 +92,16 @@ module.exports = {
             options: {
               noquotes: true,
             },
+          },
+        ],
+      },
+      {
+        test: /\.(css|scss)$/,
+        include: /(node_modules)/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
           },
         ],
       },
