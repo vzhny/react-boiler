@@ -4,11 +4,11 @@ import Navigation from '@/components/Navigation/Navigation';
 import Heading from '@/components/Heading/Heading';
 import NotFound from '@/pages/NotFound';
 import ReactLogo from '@/images/react_logo.svg';
-import styles from './App.module.scss';
+import { app, image } from './App.module.scss';
 
 const App = () => (
-  <div className={styles.App}>
-    <img className={styles.Image} src={ReactLogo} alt="React Logo" />
+  <div className={app}>
+    <img className={image} src={ReactLogo} alt="React Logo" />
     <Navigation />
     <Router>
       <Heading message="Hello World!" path="/" />

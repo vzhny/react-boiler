@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from '@reach/router';
-import styles from './Navigation.module.scss';
+import { nav, navLink } from './Navigation.module.scss';
 
 const Navigation = () => (
-  <ul className={styles.Nav}>
+  <ul className={nav}>
     <li>
-      <Link className={styles.NavLink} to="/">
+      <Link className={navLink} to="/">
         Home
       </Link>
     </li>
     <li>
-      <Link className={styles.NavLink} to="/about">
+      <Link className={navLink} to="/about">
         About
       </Link>
     </li>

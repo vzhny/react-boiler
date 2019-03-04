@@ -1,6 +1,6 @@
 @import '~@/styles/scss/partials/abstracts';
 
-.Heading {
+.heading {
   text-align: center;
   font-size: 4rem;
   font-weight: 100;
@@ -8,13 +8,13 @@
 }
 
 @include tablet {
-  .Heading {
+  .heading {
     font-size: 3rem;
   }
 }
 
 @include mobile {
-  .Heading {
+  .heading {
     font-size: 2rem;
   }
 }

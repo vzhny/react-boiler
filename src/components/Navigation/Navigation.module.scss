@@ -1,12 +1,12 @@
 @import '~@/styles/scss/partials/variables';
 
-.Nav {
+.nav {
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .NavLink {
+  .navLink {
     color: $white;
     text-decoration: none;
     margin: 1rem;
