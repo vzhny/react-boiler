@@ -1,7 +1,16 @@
 {
-  "name": "webpack-4-boilerplate",
-  "version": "0.1.0",
-  "description": "",
+  "name": "react-boiler",
+  "version": "1.0.0",
+  "description": "Full featured React 16.8+ web app boilerplate utilizing Webpack 4 and Babel 7.",
+  "keywords": [
+    "react",
+    "boilerplate",
+    "webpack",
+    "babel",
+    "web",
+    "app",
+    "frontend"
+  ],
   "main": "src/index.js",
   "scripts": {
     "build": "webpack --mode production --config ./build/webpack.prod.config.js",
