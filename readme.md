@@ -1,6 +1,12 @@
-# React Boilerplate Using Webpack 4
+# React Boiler
 
-My personal webpack 4 config setup for developing in React. Followed the steps posted [here](https://auralinna.blog/) as well as the Webpack docs.
+![Pot Logo](pot_logo.png 'Pot Logo')
+
+Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from www.flaticon.com.
+
+My personal React 16.8+ boilerplate, as both a starting point for new web apps and learning experience configuring Webpack and Babel.
+
+Note: followed the steps posted [here](https://auralinna.blog/) as well as the Webpack docs.
 
 ## Features
 
