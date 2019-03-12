@@ -4,6 +4,8 @@
 
 Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from www.flaticon.com.
 
+![Travis (.org)](https://img.shields.io/travis/vzhny/react-boiler.svg?style=flat-square)
+
 My personal React 16.8+ boilerplate, as both a starting point for new web apps and learning experience configuring Webpack and Babel.
 
 Note: followed the steps posted [here](https://auralinna.blog/) as well as the Webpack docs.
