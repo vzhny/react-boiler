@@ -29,8 +29,6 @@ module.exports = merge(webpackBaseConfig, {
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
             plugins: [
-              '@babel/plugin-proposal-class-properties',
-              '@babel/plugin-proposal-optional-chaining',
               [
                 'babel-plugin-transform-react-remove-prop-types',
                 {
