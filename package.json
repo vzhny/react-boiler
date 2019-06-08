@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Full featured React 16.8+ web app boilerplate utilizing Webpack 4 and Babel 7.",
   "engines": {
-    "yarn": "1.15.0"
+    "yarn": "1.16.0"
   },
   "keywords": [
     "react",
@@ -73,6 +73,7 @@
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
+    "progress-bar-webpack-plugin": "^1.12.1",
     "react-svg-loader": "^2.1.0",
     "react-testing-library": "^6.0.2",
     "sass-loader": "^7.1.0",
