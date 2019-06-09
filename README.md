@@ -4,8 +4,10 @@
 
 Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from www.flaticon.com.
 
-![Travis (.org)](https://img.shields.io/travis/vzhny/react-boiler.svg?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/vzhny/react-boiler.svg?style=for-the-badge)
+![Travis (.org)](https://img.shields.io/travis/vzhny/react-boiler.svg?color=%232B7D0C&style=for-the-badge)
+![David](https://img.shields.io/david/vzhny/react-boiler.svg?color=%232B7D0C&style=for-the-badge)
+![David](https://img.shields.io/david/dev/vzhny/react-boiler.svg?color=%232B7D0C&style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/vzhny/react-boiler.svg?color=%232B7D0C&style=for-the-badge)
 
 My personal React 16.8+ boilerplate, as both a starting point for new web apps and learning experience configuring Webpack and Babel.
 
@@ -21,7 +23,3 @@ Note: followed the steps posted [here](https://auralinna.blog/) as well as the W
 - (S)CSS Modules and SVG imports fully supported.
 - Ability to use CSS libraries without it conflicting with class name hashing.
 - Reach router included for single page application functionality.
-
-## To-do List
-
-- Add service worker logic and mainfest file.

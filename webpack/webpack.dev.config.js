@@ -2,6 +2,7 @@
 const merge = require('webpack-merge');
 const chalk = require('chalk');
 const ip = require('ip');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const webpackBaseConfig = require('./webpack.base.config.js');
 
@@ -19,6 +20,7 @@ module.exports = merge(webpackBaseConfig, {
     public: 'localhost:8080',
   },
   plugins: [
+    new ProgressBarPlugin(),
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
         messages: [
