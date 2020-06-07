@@ -19,7 +19,7 @@
     "test": "jest",
     "update-packages": "ncu -u"
   },
-  "author": "Diego Vizhnay <diego@vzhny.com> (https://vizhnay.io)",
+  "author": "Diego Vizhnay <diego@vzhny.com> (https://vizhnay.dev)",
   "license": "MIT",
   "husky": {
     "hooks": {
