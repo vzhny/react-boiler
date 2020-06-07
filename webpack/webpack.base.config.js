@@ -40,14 +40,17 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [[
+            presets: [
+              [
                 '@babel/preset-env',
                 {
                   targets: {
                     node: 'current',
                   },
                 },
-              ], '@babel/preset-react'],
+              ],
+              '@babel/preset-react',
+            ],
             plugins: [
               '@babel/plugin-proposal-class-properties',
               '@babel/plugin-proposal-optional-chaining',
@@ -65,16 +68,15 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true,
-              localIdentName: '[local]___[hash:base64:5]',
+              modules: {
+                localIdentName: '[local]___[hash:base64:5]',
+              },
             },
           },
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              modules: true,
-              localIdentName: '[local]___[hash:base64:5]',
             },
           },
           'postcss-loader',
