@@ -1,10 +1,7 @@
 {
   "name": "react-boiler",
-  "version": "1.0.0",
-  "description": "Full featured React 16.8+ web app boilerplate utilizing Webpack 4 and Babel 7.",
-  "engines": {
-    "yarn": "1.16.0"
-  },
+  "version": "2.0.0",
+  "description": "Full featured React 16 web app boilerplate utilizing Webpack 4 and Babel 7.",
   "keywords": [
     "react",
     "boilerplate",
