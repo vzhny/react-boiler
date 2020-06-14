@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import App from './App.tsx';
 
 describe('App', () => {
   it('should render without crashing', () => {
-    render(<App />);
+    expect(render(<App />)).toBeDefined();
   });
 });
