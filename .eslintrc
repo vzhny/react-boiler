@@ -1,5 +1,12 @@
 {
-  "extends": ["airbnb", "plugin:jest/recommended", "prettier"],
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "prettier/@typescript-eslint",
+    "prettier"
+  ],
   "plugins": ["jest", "babel"],
   "env": {
     "browser": true,
@@ -7,8 +14,8 @@
     "jest": true
   },
   "parserOptions": {
-    "parser": "babel-eslint",
-    "ecmaVersion": 9,
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
@@ -46,7 +53,14 @@
     ],
     "no-unused-expressions": "off",
     "babel/no-unused-expressions": "error",
+    "@typescript-eslint/no-empty-interface": "off",
     "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
     "react/jsx-filename-extension": "off",
     "react/jsx-one-expression-per-line": ["off"],
     "react/jsx-sort-props": [
