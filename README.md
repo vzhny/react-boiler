@@ -7,7 +7,7 @@ Icon made by [Freepik](https://www.flaticon.com/authors/freepik) from www.flatic
 ![Travis (.org) branch](https://img.shields.io/travis/vzhny/react-boiler/master?style=for-the-badge)
 ![David](https://img.shields.io/david/vzhny/react-boiler?style=for-the-badge)
 ![David](https://img.shields.io/david/dev/vzhny/react-boiler?style=for-the-badge)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/vzhny/react-boiler/master)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/vzhny/react-boiler/master?style=for-the-badge)
 
 My personal React 16 boilerplate, as both a starting point for new web apps and learning experience configuring Webpack and Babel.
 
