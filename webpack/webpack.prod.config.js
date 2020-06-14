@@ -1,10 +1,11 @@
 /* eslint-disable */
 const merge = require('webpack-merge');
 const path = require('path');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpackBaseConfig = require('./webpack.base.config.js');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = merge(webpackBaseConfig, {
   optimization: {
@@ -15,9 +16,11 @@ module.exports = merge(webpackBaseConfig, {
     },
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], {
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['dist'],
       root: path.resolve(__dirname, '..'),
     }),
+    new ProgressBarPlugin(),
   ],
   module: {
     rules: [

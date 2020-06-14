@@ -4,6 +4,25 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const babelOptions = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          node: 'current',
+        },
+      },
+    ],
+    '@babel/preset-react',
+  ],
+  plugins: [
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-optional-chaining',
+    '@babel/plugin-proposal-do-expressions',
+  ],
+};
+
 module.exports = {
   entry: './src/index',
   output: {
@@ -13,7 +32,7 @@ module.exports = {
   },
   resolve: {
     modules: ['node_modules', path.resolve(__dirname, '../src')],
-    extensions: ['.js'],
+    extensions: ['.js', '.ts', '.tsx', '.css', '.scss'],
     alias: {
       '@': path.resolve(__dirname, '../src'),
     },
@@ -35,35 +54,40 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.ts(x?)$/,
+        exclude: /(node_modules)/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: babelOptions,
+          },
+          {
+            loader: 'ts-loader',
+          },
+        ],
+      },
+      {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: [
-              [
-                '@babel/preset-env',
-                {
-                  targets: {
-                    node: 'current',
-                  },
-                },
-              ],
-              '@babel/preset-react',
-            ],
-            plugins: [
-              '@babel/plugin-proposal-class-properties',
-              '@babel/plugin-proposal-optional-chaining',
-              '@babel/plugin-proposal-do-expressions',
-            ],
-          },
+          options: babelOptions,
         },
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        enforce: 'pre',
+        loader: 'source-map-loader',
       },
       {
         test: /\.(css|scss)$/,
         exclude: /(node_modules)/,
         use: [
           MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-modules-typescript-loader',
+          },
           {
             loader: 'css-loader',
             options: {
