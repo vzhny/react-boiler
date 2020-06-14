@@ -5,8 +5,6 @@ export interface HeadingProps {
   message: string;
 }
 
-const Heading: React.FunctionComponent<Props> = ({ message }: HeadingProps) => (
-  <h1 className={styles.heading}>{message}</h1>
-);
+const Heading: React.FC<HeadingProps> = ({ message }: HeadingProps) => <h1 className={styles.heading}>{message}</h1>;
 
 export default Heading;

@@ -7,7 +7,7 @@ import About from '@/pages/About';
 import NotFound from '@/pages/NotFound';
 import styles from './App.module.scss';
 
-const App: React.FunctionComponent<Props> = () => {
+const App: React.FC = () => {
   return (
     <div className={styles.app}>
       <div className={styles.image}>

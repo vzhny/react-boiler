@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from '@reach/router';
 import styles from './Navigation.module.scss';
 
-const Navigation: React.FunctionComponent<Props> = () => (
+const Navigation: React.FC = () => (
   <ul className={styles.nav}>
     <li>
       <Link className={styles.navLink} to="/">

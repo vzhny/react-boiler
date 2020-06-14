@@ -4,7 +4,7 @@ import Heading from '@/components/Heading/Heading';
 
 // unused prop variable needed for reach router typing
 // eslint-disable-next-line
-const NotFound: React.FunctionComponent<Props> = (_: RouteComponentProps) => {
+const NotFound: React.FC<RouteComponentProps> = (_: RouteComponentProps) => {
   return <Heading message="Not Found" />;
 };
 
